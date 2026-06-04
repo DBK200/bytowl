@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <!-- Owl face - minimalist geometric -->
+  <path d="M16 3C9.5 3 5 8.5 5 14.5c0 3.5 1.5 6.5 3.5 8.5L11 27h10l2.5-4c2-2 3.5-5 3.5-8.5C27 8.5 22.5 3 16 3z" fill="#0ea5e9" fill-opacity="0.1"/>
+  <!-- Left eye ring -->
+  <circle cx="12" cy="13.5" r="4" stroke="#0ea5e9" stroke-width="1.5" fill="none"/>
+  <!-- Right eye ring -->
+  <circle cx="20" cy="13.5" r="4" stroke="#0ea5e9" stroke-width="1.5" fill="none"/>
+  <!-- Eye bridge -->
+  <path d="M15.5 11.5l1-1.5 1 1.5" stroke="#0ea5e9" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Left pupil -->
+  <circle cx="12" cy="13.5" r="2" fill="#0ea5e9"/>
+  <!-- Right pupil -->
+  <circle cx="20" cy="13.5" r="2" fill="#0ea5e9"/>
+  <!-- Beak -->
+  <path d="M14.5 19l1.5 2.5 1.5-2.5" fill="#0ea5e9" opacity="0.6"/>
+  <!-- Ear tufts - sharp angular -->
+  <path d="M8.5 7L6 2.5" stroke="#0ea5e9" stroke-width="1.8" stroke-linecap="round"/>
+  <path d="M23.5 7L26 2.5" stroke="#0ea5e9" stroke-width="1.8" stroke-linecap="round"/>
+  <!-- Binary accent dots -->
+  <circle cx="9" cy="24" r="0.8" fill="#0ea5e9" opacity="0.4"/>
+  <circle cx="12" cy="24" r="0.8" fill="#0ea5e9" opacity="0.6"/>
+  <circle cx="15" cy="24" r="0.8" fill="#0ea5e9" opacity="0.3"/>
+  <circle cx="18" cy="24" r="0.8" fill="#0ea5e9" opacity="0.7"/>
+  <circle cx="21" cy="24" r="0.8" fill="#0ea5e9" opacity="0.4"/>
+  <circle cx="24" cy="24" r="0.8" fill="#0ea5e9" opacity="0.5"/>
+</svg>
