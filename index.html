@@ -3,249 +3,210 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bytowl — WebSocket, STOMP & Socket.IO Testing Client</title>
-  <meta name="description" content="Bytowl is a desktop app for testing WebSocket, STOMP, and Socket.IO endpoints. Like Postman, but for real-time APIs.">
+  <title>Bytowl — Your Friendly Real-Time API Testing Companion</title>
+  <meta name="description" content="Bytowl is a free desktop app for testing WebSocket, STOMP, and Socket.IO endpoints. Like Postman, but for real-time APIs.">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'none'; frame-src 'none'; object-src 'none';">
   <link rel="icon" type="image/svg+xml" href="logo.svg">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <!-- Stars background -->
+  <div class="stars" aria-hidden="true">
+    <div class="star"></div><div class="star"></div><div class="star"></div>
+    <div class="star"></div><div class="star"></div><div class="star"></div>
+    <div class="star"></div><div class="star"></div><div class="star"></div>
+    <div class="star"></div><div class="star"></div><div class="star"></div>
+    <div class="star"></div><div class="star"></div><div class="star"></div>
+    <div class="star"></div><div class="star"></div><div class="star"></div>
+    <div class="star"></div><div class="star"></div><div class="star"></div>
+    <div class="star"></div><div class="star"></div><div class="star"></div>
+  </div>
+
   <!-- Nav -->
   <nav class="nav">
     <div class="nav-inner">
       <a href="#" class="nav-logo">
-        <img src="logo.svg" alt="Bytowl" width="28" height="28">
+        <img src="logo.svg" alt="Bytowl" width="30" height="30">
         <span>Bytowl</span>
       </a>
-      <div class="nav-links">
-        <a href="#features">Features</a>
-        <a href="#screenshots">Screenshots</a>
-        <a href="#protocols">Protocols</a>
-        <a href="https://github.com/DBK200/bytowl-dmg/releases/latest/download/Bytowl-1.0.0-arm64.dmg" class="nav-cta">Download</a>
-      </div>
-      <button class="nav-toggle" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
+      <a href="https://github.com/DBK200/bytowl-dmg/releases/latest/download/Bytowl-1.0.0-arm64.dmg" class="btn btn-download-nav">Download</a>
     </div>
   </nav>
 
   <!-- Hero -->
   <section class="hero">
     <div class="hero-glow"></div>
-    <div class="hero-content">
-      <div class="hero-badge">Free Desktop App</div>
-      <h1>Test real-time APIs<br><span class="accent">with confidence</span></h1>
-      <p class="hero-sub">Bytowl is a Postman-like desktop client for <strong>WebSocket</strong>, <strong>STOMP</strong>, and <strong>Socket.IO</strong> endpoints. Connect, send messages, write tests, record sessions, and stream audio — all in one app.</p>
-      <div class="hero-actions">
-        <a href="https://github.com/DBK200/bytowl-dmg/releases/latest/download/Bytowl-1.0.0-arm64.dmg" class="btn btn-primary" target="_blank" rel="noopener">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          Download for macOS
-        </a>
-        <a href="https://github.com/DBK200/bytowl-dmg" class="btn btn-secondary" target="_blank" rel="noopener">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-          View on GitHub
-        </a>
-      </div>
+
+    <!-- Big friendly owl -->
+    <div class="owl-mascot">
+      <svg viewBox="0 0 200 220" fill="none" xmlns="http://www.w3.org/2000/svg" class="owl-svg">
+        <!-- Body -->
+        <ellipse cx="100" cy="140" rx="70" ry="72" fill="#1a2744"/>
+        <ellipse cx="100" cy="140" rx="70" ry="72" fill="url(#owlGrad)" opacity="0.6"/>
+        <!-- Belly -->
+        <ellipse cx="100" cy="158" rx="40" ry="38" fill="#1e3050" opacity="0.7"/>
+        <!-- Belly pattern -->
+        <path d="M80 145 Q85 150 80 155 Q85 160 80 165" stroke="#38bdf8" stroke-width="1" opacity="0.2" stroke-linecap="round"/>
+        <path d="M100 140 Q105 145 100 150 Q105 155 100 160 Q105 165 100 170" stroke="#38bdf8" stroke-width="1" opacity="0.2" stroke-linecap="round"/>
+        <path d="M120 145 Q115 150 120 155 Q115 160 120 165" stroke="#38bdf8" stroke-width="1" opacity="0.2" stroke-linecap="round"/>
+        <!-- Ear tufts -->
+        <path d="M52 82 L38 40 L62 72" fill="#1a2744" stroke="#0ea5e9" stroke-width="2"/>
+        <path d="M148 82 L162 40 L138 72" fill="#1a2744" stroke="#0ea5e9" stroke-width="2"/>
+        <path d="M42 50 L38 40 L48 48" fill="#38bdf8" opacity="0.3"/>
+        <path d="M158 50 L162 40 L152 48" fill="#38bdf8" opacity="0.3"/>
+        <!-- Face disc -->
+        <ellipse cx="100" cy="110" rx="55" ry="48" fill="#162038"/>
+        <!-- Left eye -->
+        <circle cx="78" cy="105" r="22" fill="#0c1929" stroke="#0ea5e9" stroke-width="2.5"/>
+        <circle cx="78" cy="105" r="14" fill="#0ea5e9"/>
+        <circle cx="78" cy="105" r="9" fill="#0c1929"/>
+        <circle cx="73" cy="100" r="5" fill="white" opacity="0.9"/>
+        <circle cx="82" cy="108" r="2.5" fill="white" opacity="0.5"/>
+        <!-- Right eye -->
+        <circle cx="122" cy="105" r="22" fill="#0c1929" stroke="#0ea5e9" stroke-width="2.5"/>
+        <circle cx="122" cy="105" r="14" fill="#0ea5e9"/>
+        <circle cx="122" cy="105" r="9" fill="#0c1929"/>
+        <circle cx="117" cy="100" r="5" fill="white" opacity="0.9"/>
+        <circle cx="126" cy="108" r="2.5" fill="white" opacity="0.5"/>
+        <!-- Beak -->
+        <path d="M93 125 L100 138 L107 125" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+        <path d="M93 125 L100 130 L107 125" fill="#fbbf24"/>
+        <!-- Eyebrow tufts -->
+        <path d="M56 88 Q68 78 80 86" stroke="#0ea5e9" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+        <path d="M144 88 Q132 78 120 86" stroke="#0ea5e9" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+        <!-- Feet -->
+        <ellipse cx="80" cy="210" rx="18" ry="8" fill="#1a2744" stroke="#0ea5e9" stroke-width="1.5"/>
+        <ellipse cx="120" cy="210" rx="18" ry="8" fill="#1a2744" stroke="#0ea5e9" stroke-width="1.5"/>
+        <line x1="72" y1="210" x2="72" y2="206" stroke="#0ea5e9" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="80" y1="210" x2="80" y2="204" stroke="#0ea5e9" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="88" y1="210" x2="88" y2="206" stroke="#0ea5e9" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="112" y1="210" x2="112" y2="206" stroke="#0ea5e9" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="120" y1="210" x2="120" y2="204" stroke="#0ea5e9" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="128" y1="210" x2="128" y2="206" stroke="#0ea5e9" stroke-width="1.5" stroke-linecap="round"/>
+        <!-- Wing (left) -->
+        <path d="M32 120 Q20 145 35 175 Q45 180 50 170 Q40 150 42 125Z" fill="#152240" stroke="#0ea5e9" stroke-width="1.5" opacity="0.8"/>
+        <!-- Wing (right, waving!) -->
+        <path d="M168 120 Q180 100 175 80 Q170 75 160 85 Q165 105 158 125Z" fill="#152240" stroke="#0ea5e9" stroke-width="1.5" opacity="0.8" class="wave-wing"/>
+        <defs>
+          <radialGradient id="owlGrad" cx="50%" cy="30%" r="60%">
+            <stop offset="0%" stop-color="#0ea5e9" stop-opacity="0.15"/>
+            <stop offset="100%" stop-color="#0ea5e9" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+      </svg>
     </div>
-    <div class="hero-screenshot">
-      <div class="screenshot-frame">
-        <div class="screenshot-dots"><span></span><span></span><span></span></div>
-        <img src="docs/pictures/img.png" alt="Bytowl main interface showing WebSocket connection with live message stream" loading="eager">
+
+    <!-- Speech bubble -->
+    <div class="speech-bubble">
+      <p>Hey there! I'm <strong>Bytowl</strong> — your friendly companion for testing <strong>WebSocket</strong>, <strong>STOMP</strong> &amp; <strong>Socket.IO</strong> endpoints.</p>
+    </div>
+
+    <p class="hero-sub">Connect, send messages, write tests, record sessions, stream audio — all from one cozy desktop app.</p>
+
+    <div class="hero-actions">
+      <a href="https://github.com/DBK200/bytowl-dmg/releases/latest/download/Bytowl-1.0.0-arm64.dmg" class="btn btn-primary">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download for macOS
+      </a>
+      <div class="download-meta">
+        <span>v1.0.0</span>
+        <span>&middot;</span>
+        <span>macOS 12+</span>
+        <span>&middot;</span>
+        <span>Free</span>
       </div>
     </div>
   </section>
 
-  <!-- Protocols -->
-  <section class="protocols" id="protocols">
+  <!-- Screenshot -->
+  <section class="showcase">
     <div class="container">
-      <div class="section-header">
-        <h2>Three protocols.<br><span class="accent">One app.</span></h2>
-        <p>No more switching between tools. Bytowl speaks all major real-time protocols natively.</p>
-      </div>
-      <div class="protocol-grid">
-        <div class="protocol-card">
-          <div class="protocol-icon ws">WS</div>
-          <h3>WebSocket</h3>
-          <p>Connect to any WebSocket endpoint. Send text or binary messages. Watch live responses stream in.</p>
-        </div>
-        <div class="protocol-card">
-          <div class="protocol-icon stomp">STOMP</div>
-          <h3>STOMP</h3>
-          <p>Full STOMP 1.2 support with topic subscriptions, destination routing, and heartbeat configuration.</p>
-        </div>
-        <div class="protocol-card">
-          <div class="protocol-icon socketio">IO</div>
-          <h3>Socket.IO</h3>
-          <p>Connect to Socket.IO namespaces, emit custom events, and listen for server-pushed messages.</p>
-        </div>
+      <p class="showcase-label">See your real-time messages flow</p>
+      <div class="screenshot-frame">
+        <div class="screenshot-dots"><span></span><span></span><span></span></div>
+        <img src="docs/pictures/img.png" alt="Bytowl main interface" loading="lazy">
       </div>
     </div>
   </section>
 
   <!-- Features -->
-  <section class="features" id="features">
+  <section class="features">
     <div class="container">
-      <div class="section-header">
-        <h2>Everything you need to<br><span class="accent">debug real-time APIs</span></h2>
-      </div>
-
-      <div class="feature-row">
-        <div class="feature-text">
-          <div class="feature-label">Automated Testing</div>
-          <h3>Write tests that run on every message</h3>
-          <p>Write JavaScript or Python test scripts that execute automatically on each incoming message. Assert on response properties, validate schemas, and export test reports as HTML or PDF.</p>
-          <ul class="feature-list">
-            <li>JavaScript &amp; Python support</li>
-            <li>Syntax highlighting &amp; error checking</li>
-            <li>Code snippets library</li>
-            <li>Export reports as HTML/PDF</li>
-          </ul>
-        </div>
-        <div class="feature-img">
-          <div class="screenshot-frame">
-            <div class="screenshot-dots"><span></span><span></span><span></span></div>
-            <img src="docs/pictures/img_1.png" alt="Tests tab showing JavaScript test code with passing test results" loading="lazy">
+      <h2 class="section-title">What can Bytowl do?</h2>
+      <div class="feature-grid">
+        <div class="feature-pill">
+          <div class="pill-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
+          <div>
+            <h3>Automated Tests</h3>
+            <p>Write JS or Python tests that run on every incoming message.</p>
           </div>
         </div>
-      </div>
-
-      <div class="feature-row reverse">
-        <div class="feature-text">
-          <div class="feature-label">Audio Streaming</div>
-          <h3>Stream microphone audio to endpoints</h3>
-          <p>Capture microphone input and stream audio chunks directly to your WebSocket or Socket.IO endpoint. Perfect for testing speech-to-text services, audio processing pipelines, and real-time voice apps.</p>
-          <ul class="feature-list">
-            <li>PCM 16-bit, 32-bit float, WAV, Opus</li>
-            <li>Configurable sample rate &amp; chunk size</li>
-            <li>Live waveform visualization</li>
-            <li>Base64 or binary transport</li>
-          </ul>
-        </div>
-        <div class="feature-img">
-          <div class="screenshot-frame">
-            <div class="screenshot-dots"><span></span><span></span><span></span></div>
-            <img src="docs/pictures/img_2.png" alt="Audio tab showing microphone streaming with waveform and chunk log" loading="lazy">
+        <div class="feature-pill">
+          <div class="pill-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg></div>
+          <div>
+            <h3>Audio Streaming</h3>
+            <p>Stream microphone audio as PCM, WAV, or Opus chunks.</p>
           </div>
         </div>
-      </div>
-
-      <div class="feature-row">
-        <div class="feature-text">
-          <div class="feature-label">Record &amp; Replay</div>
-          <h3>Capture sessions, replay them later</h3>
-          <p>Record every send, receive, and subscribe action in a session. Replay recordings against live endpoints with diff mode to catch regressions, or test mode to validate behavior.</p>
-          <ul class="feature-list">
-            <li>Step-by-step recording</li>
-            <li>Diff mode compares expected vs actual</li>
-            <li>Editable recorded steps</li>
-            <li>Audio chunk replay support</li>
-          </ul>
-        </div>
-        <div class="feature-img">
-          <div class="screenshot-frame">
-            <div class="screenshot-dots"><span></span><span></span><span></span></div>
-            <img src="docs/pictures/img_3.png" alt="Recorder tab showing captured session steps" loading="lazy">
+        <div class="feature-pill">
+          <div class="pill-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg></div>
+          <div>
+            <h3>Record &amp; Replay</h3>
+            <p>Capture sessions and replay them with diff mode.</p>
           </div>
         </div>
-      </div>
-
-      <div class="feature-row reverse">
-        <div class="feature-text">
-          <div class="feature-label">Replay with Diff</div>
-          <h3>Spot regressions instantly</h3>
-          <p>Replay a recorded session and see exactly what changed. Diff mode highlights mismatches between the baseline recording and the current response, making regression testing effortless.</p>
-          <ul class="feature-list">
-            <li>Side-by-side diff view</li>
-            <li>Pass/fail status per step</li>
-            <li>Live progress indicator</li>
-            <li>Test mode for CI-style assertions</li>
-          </ul>
+        <div class="feature-pill">
+          <div class="pill-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+          <div>
+            <h3>Environments</h3>
+            <p>Define variables per environment with {{var}} syntax.</p>
+          </div>
         </div>
-        <div class="feature-img">
-          <div class="screenshot-frame">
-            <div class="screenshot-dots"><span></span><span></span><span></span></div>
-            <img src="docs/pictures/img_4.png" alt="Replay modal with diff mode showing pass and fail results" loading="lazy">
+        <div class="feature-pill">
+          <div class="pill-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg></div>
+          <div>
+            <h3>Multi-Tab</h3>
+            <p>Open multiple connections side by side as tabs.</p>
+          </div>
+        </div>
+        <div class="feature-pill">
+          <div class="pill-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+          <div>
+            <h3>AsyncAPI Import</h3>
+            <p>Import specs to auto-generate connection collections.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- More Features Grid -->
-  <section class="more-features" id="screenshots">
+  <!-- Download CTA -->
+  <section class="cta">
     <div class="container">
-      <div class="section-header">
-        <h2>And there's <span class="accent">more</span></h2>
+      <div class="cta-owl">
+        <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" width="80" height="80">
+          <circle cx="40" cy="44" r="28" fill="#1a2744"/>
+          <circle cx="32" cy="38" r="9" fill="#0c1929" stroke="#0ea5e9" stroke-width="1.5"/>
+          <circle cx="32" cy="38" r="5.5" fill="#0ea5e9"/>
+          <circle cx="32" cy="38" r="3.5" fill="#0c1929"/>
+          <circle cx="30" cy="36" r="2" fill="white" opacity="0.9"/>
+          <circle cx="48" cy="38" r="9" fill="#0c1929" stroke="#0ea5e9" stroke-width="1.5"/>
+          <circle cx="48" cy="38" r="5.5" fill="#0ea5e9"/>
+          <circle cx="48" cy="38" r="3.5" fill="#0c1929"/>
+          <circle cx="46" cy="36" r="2" fill="white" opacity="0.9"/>
+          <path d="M37 50 L40 56 L43 50" fill="#f59e0b"/>
+          <path d="M25 28 L18 14" stroke="#0ea5e9" stroke-width="2" stroke-linecap="round"/>
+          <path d="M55 28 L62 14" stroke="#0ea5e9" stroke-width="2" stroke-linecap="round"/>
+        </svg>
       </div>
-      <div class="features-grid">
-        <div class="mini-feature">
-          <div class="mini-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
-          </div>
-          <h4>Environment Variables</h4>
-          <p>Define variables per environment and reference them in URLs, headers, and message bodies with <code>{{variable}}</code> syntax.</p>
-        </div>
-        <div class="mini-feature">
-          <div class="mini-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
-          </div>
-          <h4>Workspaces &amp; Folders</h4>
-          <p>Organize connections into workspaces and folders. Drag-and-drop to reorder. Export and import entire folders as JSON.</p>
-        </div>
-        <div class="mini-feature">
-          <div class="mini-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-          </div>
-          <h4>Syntax Highlighting</h4>
-          <p>JSON, XML, JavaScript, and Python highlighting in message editors and test scripts, with variable overlays.</p>
-        </div>
-        <div class="mini-feature">
-          <div class="mini-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
-          </div>
-          <h4>Git Integration</h4>
-          <p>Connect a Git repository to version-control your workspace. Push and pull collections and environments via the built-in Git sync.</p>
-        </div>
-        <div class="mini-feature">
-          <div class="mini-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-          </div>
-          <h4>AsyncAPI Import</h4>
-          <p>Import AsyncAPI specs to auto-generate connection collections with the right protocols, endpoints, and topics pre-filled.</p>
-        </div>
-        <div class="mini-feature">
-          <div class="mini-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
-          </div>
-          <h4>Multi-Tab Interface</h4>
-          <p>Open multiple connections as tabs and switch between them instantly. Each tab keeps its own state, messages, and test results.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Download -->
-  <section class="download" id="download">
-    <div class="container">
-      <div class="download-glow"></div>
-      <div class="download-content">
-        <h2>Ready to test<br>your real-time APIs?</h2>
-        <p>Download Bytowl for free and start debugging WebSocket, STOMP, and Socket.IO endpoints in minutes.</p>
-        <div class="download-buttons">
-          <a href="https://github.com/DBK200/bytowl-dmg/releases/latest/download/Bytowl-1.0.0-arm64.dmg" class="btn btn-primary btn-lg" target="_blank" rel="noopener">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-            Download for macOS
-          </a>
-          <div class="download-meta">
-            <span>v1.0.0</span>
-            <span>&middot;</span>
-            <span>macOS 12+</span>
-            <span>&middot;</span>
-            <span>Free to Use</span>
-          </div>
-        </div>
-        <p class="download-note">Windows and Linux builds coming soon.</p>
-      </div>
+      <h2>Ready to fly?</h2>
+      <p>Download Bytowl and start debugging your real-time APIs tonight.</p>
+      <a href="https://github.com/DBK200/bytowl-dmg/releases/latest/download/Bytowl-1.0.0-arm64.dmg" class="btn btn-primary btn-lg">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+        Download for macOS
+      </a>
+      <p class="cta-note">Windows &amp; Linux coming soon.</p>
     </div>
   </section>
 
@@ -253,51 +214,26 @@
   <footer class="footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <img src="logo.svg" alt="Bytowl" width="24" height="24">
+        <img src="logo.svg" alt="Bytowl" width="22" height="22">
         <span>Bytowl</span>
-      </div>
-      <div class="footer-links">
-        <a href="https://github.com/DBK200/bytowl-dmg" target="_blank" rel="noopener">GitHub</a>
-        <a href="#features">Features</a>
-        <a href="#download">Download</a>
       </div>
       <div class="footer-copy">&copy; 2026 Bytowl. All rights reserved. Free to use.</div>
     </div>
   </footer>
 
   <script>
-    // Mobile nav toggle
-    const toggle = document.querySelector('.nav-toggle');
-    const links = document.querySelector('.nav-links');
-    toggle.addEventListener('click', () => {
-      links.classList.toggle('open');
-      toggle.classList.toggle('open');
-    });
-
-    // Close mobile nav on link click
-    links.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => {
-        links.classList.remove('open');
-        toggle.classList.remove('open');
-      });
-    });
-
-    // Navbar background on scroll
     const nav = document.querySelector('.nav');
     window.addEventListener('scroll', () => {
       nav.classList.toggle('scrolled', window.scrollY > 40);
     });
 
-    // Animate elements on scroll
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
+        if (entry.isIntersecting) entry.target.classList.add('visible');
       });
-    }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
-    document.querySelectorAll('.feature-row, .protocol-card, .mini-feature, .download-content').forEach(el => {
+    document.querySelectorAll('.feature-pill, .screenshot-frame, .cta, .showcase-label').forEach(el => {
       observer.observe(el);
     });
   </script>
