@@ -125,7 +125,7 @@
       <p class="showcase-label">See your real-time messages flow</p>
       <div class="screenshot-frame">
         <div class="screenshot-dots"><span></span><span></span><span></span></div>
-        <img src="docs/pictures/img.png" alt="Bytowl main interface" loading="lazy">
+        <img src="docs/pictures/img.png" alt="Bytowl main interface" loading="eager">
       </div>
     </div>
   </section>
@@ -221,21 +221,6 @@
     </div>
   </footer>
 
-  <script>
-    const nav = document.querySelector('.nav');
-    window.addEventListener('scroll', () => {
-      nav.classList.toggle('scrolled', window.scrollY > 40);
-    });
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add('visible');
-      });
-    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-
-    document.querySelectorAll('.feature-pill, .screenshot-frame, .cta, .showcase-label').forEach(el => {
-      observer.observe(el);
-    });
-  </script>
+  <script src="main.js"></script>
 </body>
 </html>
